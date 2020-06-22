@@ -1,4 +1,4 @@
-# The dta  we need to retrieve.
+# The data  we need to retrieve.
 # 1. The total number of votes cast
 # 2. A complete list of candidates who received votes
 # 3. The percentage of votes each candidate won
@@ -68,18 +68,19 @@ with open(file_to_save, "w") as txt_file:
         # Retrieve vote count and percentage.
         votes = candidate_votes[candidate]
         vote_percentage = float(votes) / float(total_votes) * 100
-        candidate_results = (
-            f"{candidate}: {vote_percentage:.1f}% ({votes:,})\n")
-    # Print each candidate, their voter count, and percentage to the terminal.
-    print(candidate_results)
-    #  Save the candidate results to our text file.
-    txt_file.write(candidate_results)
-    # Determine the percentage of votes for each candidate by looping through the counts.
-    if (votes > winning_count) and (vote_percentage > winning_percentage):
+        candidate_results = (f"{candidate}: {vote_percentage:.1f}% ({votes:,})\n")
+
+        # Print each candidate, their voter count, and percentage to the terminal.
+        print(candidate_results)
+        #  Save the candidate results to our text file.
+        txt_file.write(candidate_results)
+    
+        # Determine the percentage of votes for each candidate by looping through the counts.
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
             winning_count = votes
             winning_candidate = candidate
             winning_percentage = vote_percentage
-    # Print the winning candidate's results to the terminal.
+        # Print the winning candidate's results to the terminal.
     winning_candidate_summary = (
         f"-------------------------\n"
         f"Winner: {winning_candidate}\n"
@@ -88,4 +89,4 @@ with open(file_to_save, "w") as txt_file:
         f"-------------------------\n")
     print(winning_candidate_summary)
     # Save the winning candidate's results to the text file.
-    txt_file.write(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)    
