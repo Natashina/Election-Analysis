@@ -30,4 +30,16 @@ Raymon Anthony Doane received 3.1% (11,606)
 The winner of the election was:
 Diana DeGette who received 73.8% of the vote and 272,892 of votes.
 
+## Challenge Overview
+Refactored the code to add per county results. 
+
+## Challenge Summary
+County Votes:
+Jefferson: 10.5% (38,855)
+Denver: 82.8% (306,055)
+Arapahoe: 6.7% (24,801)
+
+-------------------------
+Largest County Turnout: Denver
+
 
